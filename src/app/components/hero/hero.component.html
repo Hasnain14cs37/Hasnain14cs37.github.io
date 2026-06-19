@@ -1,0 +1,54 @@
+<section id="hero" class="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <div class="badge">
+        <span class="dot"></span> Open to opportunities
+      </div>
+      <h1>
+        Hi, I'm <span class="gradient-name">Muhammad<br>Hasnain</span>
+      </h1>
+      <div class="role-wrapper">
+        <span class="role-text">{{ currentRole }}</span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Full Stack Developer with <strong>4+ years</strong> of experience crafting scalable web applications.
+        Specialized in Angular, .NET, and AI-powered development using <strong>Cursor</strong> & <strong>Claude AI</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          View My Work ↓
+        </a>
+        <a href="mailto:engr.hasnain14cs37@gmail.com" class="btn-outline">
+          Get In Touch
+        </a>
+        <a [href]="cvPath" download class="btn-outline">
+          Download CV ↓
+        </a>
+      </div>
+      <div class="stats">
+        <div class="stat" *ngFor="let s of stats">
+          <span class="stat-value">{{ s.value }}</span>
+          <span class="stat-label">{{ s.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-glow"></div>
+        <img src="img/profile-hero.png" alt="Muhammad Hasnain" class="avatar" />
+      </div>
+      <div class="floating-badge fb-1">🔴 Angular</div>
+      <div class="floating-badge fb-2">💜 .NET</div>
+      <div class="floating-badge fb-3">🖱️ Cursor</div>
+      <div class="floating-badge fb-4">🤖 Claude AI</div>
+    </div>
+  </div>
+</section>

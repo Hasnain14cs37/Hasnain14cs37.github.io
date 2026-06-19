@@ -1,0 +1,21 @@
+<nav class="navbar" [class.scrolled]="scrolled" [class.menu-open]="menuOpen">
+  <div class="nav-container">
+    <a class="logo" (click)="scrollTo('#hero')">
+      <span class="logo-bracket">&lt;</span>MH<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li *ngFor="let link of navLinks">
+        <a (click)="scrollTo(link.href)">{{ link.label }}</a>
+      </li>
+      <li>
+        <a href="https://www.upwork.com/freelancers/~0129c81b65e7d88cfb"
+           target="_blank" class="hire-btn">Hire Me</a>
+      </li>
+    </ul>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
