@@ -6,19 +6,8 @@
       <p class="section-subtitle">Here's a little bit about who I am and what I do</p>
     </div>
 
-    <div class="about-grid">
-      <div class="about-image-col">
-        <div class="img-frame">
-          <img src="img/profile-pic (1).png" alt="Muhammad Hasnain" />
-          <div class="img-decoration"></div>
-        </div>
-        <div class="experience-chip">
-          <span class="exp-number">4+</span>
-          <span class="exp-label">Years of Experience</span>
-        </div>
-      </div>
-
-      <div class="about-content">
+    <div class="about-content">
+      <div class="about-text">
         <p class="about-lead">
           I'm a <strong>Full Stack Developer & Prompt Engineer</strong> based in Bahawalpur, Pakistan,
           building high-quality, scalable web applications powered by modern AI tools.
@@ -33,13 +22,22 @@
           I leverage AI tools like <strong>Cursor</strong> and <strong>Claude AI</strong>
           for accelerated development, and I work comfortably with both SQL and NoSQL databases.
         </p>
+      </div>
 
+      <div class="about-meta">
         <div class="info-grid">
           <div class="info-card" *ngFor="let item of info">
             <span class="info-icon">{{ item.icon }}</span>
             <div>
               <span class="info-label">{{ item.label }}</span>
               <span class="info-value">{{ item.value }}</span>
+            </div>
+          </div>
+          <div class="info-card experience-card">
+            <span class="info-icon">🏆</span>
+            <div>
+              <span class="info-label">Experience</span>
+              <span class="info-value">4+ Years</span>
             </div>
           </div>
         </div>
