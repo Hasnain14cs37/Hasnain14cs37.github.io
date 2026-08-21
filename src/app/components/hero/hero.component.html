@@ -14,10 +14,37 @@
     <div class="showcase" appReveal>
       <div class="showcase-bar">
         <span class="d"></span><span class="d"></span><span class="d"></span>
-        <span class="url">hasnain14cs37.github.io</span>
+        <span class="url"><span class="bar-live"></span> full-stack&nbsp;+&nbsp;AI · dashboard</span>
       </div>
       <div class="showcase-body">
-        <img src="img/ai-agent.png" alt="AI-powered incident-response dashboard built by Muhammad Hasnain" loading="lazy" />
+        <div class="viz" aria-hidden="true">
+          <div class="viz-head">
+            <span class="viz-title">Overview</span>
+            <span class="viz-pill"><span class="pd"></span> Live</span>
+          </div>
+          <div class="viz-tiles">
+            <div class="viz-tile"><span>Requests</span><b>1.2k</b></div>
+            <div class="viz-tile"><span>Uptime</span><b class="accent">99.9%</b></div>
+            <div class="viz-tile"><span>Avg API</span><b>42ms</b></div>
+          </div>
+          <div class="viz-main">
+            <div class="viz-card">
+              <h4>Throughput</h4>
+              <div class="viz-chart">
+                <span style="--h:38%"></span><span style="--h:60%"></span><span style="--h:47%"></span>
+                <span style="--h:78%"></span><span style="--h:56%"></span><span style="--h:88%"></span>
+                <span style="--h:66%"></span><span style="--h:95%"></span>
+              </div>
+            </div>
+            <div class="viz-card viz-code-card">
+              <h4>deploy.ts</h4>
+<pre class="viz-code"><span class="c">// ship it</span>
+<span class="k">const</span> <span class="fn">deploy</span> = <span class="k">async</span> () =>
+  <span class="k">await</span> test() &amp;&amp; ship(<span class="s">'prod'</span>);</pre>
+            </div>
+          </div>
+          <span class="viz-chip"><span class="dot"></span> AI agent · running</span>
+        </div>
       </div>
     </div>
   </div>
