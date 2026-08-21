@@ -18,29 +18,38 @@
       </div>
       <div class="showcase-body">
         <div class="viz" aria-hidden="true">
-          <div class="viz-head">
-            <span class="viz-title">Overview</span>
-            <span class="viz-pill"><span class="pd"></span> Live</span>
+          <div class="viz-rail">
+            <span class="viz-logo">M</span>
+            <span class="viz-nav on"></span>
+            <span class="viz-nav"></span>
+            <span class="viz-nav"></span>
           </div>
-          <div class="viz-tiles">
-            <div class="viz-tile"><span>Requests</span><b>1.2k</b></div>
-            <div class="viz-tile"><span>Uptime</span><b class="accent">99.9%</b></div>
-            <div class="viz-tile"><span>Avg API</span><b>42ms</b></div>
-          </div>
-          <div class="viz-main">
-            <div class="viz-card">
-              <h4>Throughput</h4>
-              <div class="viz-chart">
-                <span style="--h:38%"></span><span style="--h:60%"></span><span style="--h:47%"></span>
-                <span style="--h:78%"></span><span style="--h:56%"></span><span style="--h:88%"></span>
-                <span style="--h:66%"></span><span style="--h:95%"></span>
+          <div class="viz-body">
+            <div class="viz-head">
+              <div>
+                <span class="viz-title">Analytics</span>
+                <span class="viz-sub">Last 7 days</span>
               </div>
+              <span class="viz-pill"><span class="pd"></span> Live</span>
             </div>
-            <div class="viz-card viz-code-card">
-              <h4>deploy.ts</h4>
-<pre class="viz-code"><span class="c">// ship it</span>
-<span class="k">const</span> <span class="fn">deploy</span> = <span class="k">async</span> () =>
-  <span class="k">await</span> test() &amp;&amp; ship(<span class="s">'prod'</span>);</pre>
+            <div class="viz-kpis">
+              <div class="viz-kpi"><span class="kl">Requests</span><b>18.2k</b><span class="kd up">▲ 12%</span></div>
+              <div class="viz-kpi"><span class="kl">Uptime</span><b>99.9%</b><span class="kd up">▲ 0.2%</span></div>
+              <div class="viz-kpi"><span class="kl">Avg API</span><b>42<i>ms</i></b><span class="kd down">▼ 8%</span></div>
+            </div>
+            <div class="viz-chartcard">
+              <div class="viz-chart-head"><span>Throughput</span><span class="viz-legend"><i></i> req/s</span></div>
+              <svg class="viz-line" viewBox="0 0 300 96" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="vzfill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c6f24e" stop-opacity="0.35"/>
+                    <stop offset="1" stop-color="#c6f24e" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="vz-area" d="M0,74 L43,60 L86,66 L129,44 L171,50 L214,28 L257,36 L297,14 L297,96 L0,96 Z" fill="url(#vzfill)"/>
+                <path class="vz-stroke" d="M0,74 L43,60 L86,66 L129,44 L171,50 L214,28 L257,36 L297,14" fill="none" stroke="#c6f24e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              <span class="vz-endpoint"></span>
             </div>
           </div>
           <span class="viz-chip"><span class="dot"></span> AI agent · running</span>
