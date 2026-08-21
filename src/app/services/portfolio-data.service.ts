@@ -35,7 +35,7 @@ export class PortfolioDataService {
   ];
 
   readonly techStack: string[] = [
-    'JavaScript', 'TypeScript', 'Angular', '.NET', 'SQL', 'MongoDB',
+    'JavaScript', 'TypeScript', 'Angular', '.NET', 'SQL', 'MongoDB', 'Redis',
     'OpenAI API', 'Claude AI', 'Cursor', 'REST APIs', 'Azure', 'Netlify', 'Heroku',
   ];
 
@@ -113,7 +113,7 @@ export class PortfolioDataService {
       icon: '🔗',
       title: 'API Design & Integration',
       desc: 'REST APIs, third-party integrations, and data models that scale. 100% of my projects are API-driven.',
-      points: ['REST API architecture', 'Third-party integrations', 'Cloud deploy: Azure / Netlify / Heroku'],
+      points: ['REST API architecture', 'Redis caching & performance', 'Cloud deploy: Azure / Netlify / Heroku'],
     },
     {
       icon: '🤖',
