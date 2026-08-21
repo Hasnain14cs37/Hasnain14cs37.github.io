@@ -36,7 +36,7 @@ export class PortfolioDataService {
 
   readonly techStack: string[] = [
     'JavaScript', 'TypeScript', 'Angular', '.NET', 'SQL', 'MongoDB', 'Redis',
-    'OpenAI API', 'Claude AI', 'Cursor', 'REST APIs', 'Azure', 'Netlify', 'Heroku',
+    'OpenAI API', 'Claude AI', 'Cursor', 'REST APIs', 'Docker', 'Azure', 'Netlify', 'Heroku',
   ];
 
   readonly projects: Project[] = [
@@ -113,7 +113,7 @@ export class PortfolioDataService {
       icon: '🔗',
       title: 'API Design & Integration',
       desc: 'REST APIs, third-party integrations, and data models that scale. 100% of my projects are API-driven.',
-      points: ['REST API architecture', 'Redis caching & performance', 'Cloud deploy: Azure / Netlify / Heroku'],
+      points: ['REST API architecture', 'Redis caching & performance', 'Docker & cloud deploy (Azure / Netlify / Heroku)'],
     },
     {
       icon: '🤖',
