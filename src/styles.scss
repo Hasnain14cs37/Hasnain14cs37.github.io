@@ -120,14 +120,11 @@ h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -0.02em; line-height: 
 .sc-title .hl { display: block; color: var(--accent); }
 .sc-role { font-family: var(--font-mono); font-size: clamp(0.55rem, 1.4vw, 0.72rem); color: #c3ccdf; margin-bottom: 0.9rem; }
 .sc-badge { font-family: var(--font-mono); font-size: 0.6rem; color: #0a0a0c; background: var(--accent); padding: 0.3rem 0.7rem; border-radius: 100px; display: inline-block; }
-.sc-panel { width: 40%; flex-shrink: 0; align-self: stretch; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 4%; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
-.sc-panel-head { display: flex; align-items: center; justify-content: space-between; font-family: var(--font-mono); font-size: 0.55rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8%; }
-.sc-up { color: var(--accent); }
-.sc-chart { flex: 1; width: 100%; min-height: 46px; overflow: visible; }
-.sc-stroke { stroke-dasharray: 300; stroke-dashoffset: 300; animation: sc-draw 1.5s ease 0.4s forwards; }
-.sc-area { opacity: 0; animation: sc-fade 0.9s ease 1s forwards; }
-@keyframes sc-draw { to { stroke-dashoffset: 0; } }
-@keyframes sc-fade { to { opacity: 1; } }
+.sc-panel { width: 38%; flex-shrink: 0; align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 6%; }
+.sc-stat { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 6% 8%; }
+.sc-stat span { display: block; font-family: var(--font-mono); font-size: 0.52rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+.sc-stat b { font-size: clamp(0.95rem, 2.4vw, 1.4rem); font-weight: 800; letter-spacing: -0.02em; }
+.sc-stat b i { font-size: 0.55em; font-style: normal; color: var(--muted); font-weight: 600; margin-left: 1px; }
 .sc-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .sc-tags span { font-family: var(--font-mono); font-size: 0.56rem; color: var(--muted); border: 1px solid var(--line); border-radius: 100px; padding: 0.22rem 0.6rem; }
 .laptop-base { position: relative; height: 14px; margin: 0 -5.5%; background: linear-gradient(180deg, #d4d7dd, #9096a1); border-radius: 0 0 16px 16px; box-shadow: 0 24px 40px rgba(0,0,0,0.5); }
