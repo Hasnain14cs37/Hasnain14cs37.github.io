@@ -35,7 +35,7 @@ export class PortfolioDataService {
   ];
 
   readonly techStack: string[] = [
-    'JavaScript', 'TypeScript', 'Angular', '.NET', 'SQL', 'MongoDB', 'Redis',
+    'JavaScript', 'TypeScript', 'Angular', '.NET', 'SQL', 'PostgreSQL', 'MongoDB', 'Redis',
     'OpenAI API', 'Claude AI', 'Cursor', 'REST APIs', 'Docker', 'Azure', 'Netlify', 'Heroku',
   ];
 
