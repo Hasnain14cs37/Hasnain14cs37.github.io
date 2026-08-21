@@ -1,18 +1,17 @@
+<div class="scroll-progress" [style.width.%]="progress"></div>
 <nav class="navbar" [class.scrolled]="scrolled" [class.menu-open]="menuOpen">
   <div class="nav-container">
-    <a class="logo" (click)="scrollTo('#hero')">
-      <span class="logo-bracket">&lt;</span>MH<span class="logo-bracket">/&gt;</span>
+    <a class="logo" href="#hero" (click)="scrollTo('#hero', $event)">
+      <span class="badge-dot"></span> Muhammad Hasnain
     </a>
 
     <ul class="nav-links" [class.open]="menuOpen">
       <li *ngFor="let link of navLinks">
-        <a (click)="scrollTo(link.href)">{{ link.label }}</a>
-      </li>
-      <li>
-        <a href="https://www.upwork.com/freelancers/~0129c81b65e7d88cfb"
-           target="_blank" class="hire-btn">Hire Me</a>
+        <a [href]="link.href" (click)="scrollTo(link.href, $event)" [class.active]="activeSection === link.href">{{ link.label }}</a>
       </li>
     </ul>
+
+    <a [href]="'mailto:' + email" class="btn btn-accent hire">Hire me</a>
 
     <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen">
       <span></span><span></span><span></span>

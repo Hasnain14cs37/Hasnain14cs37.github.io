@@ -1,71 +1,48 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 
+export interface Stat { value: string; label: string; }
+export interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  category: string;
+  image: string;
+  year: string;
+  color: string;
+}
+export interface Social { label: string; href: string; icon: string; }
+export interface Service { icon: string; title: string; desc: string; points: string[]; }
+export interface ProcessStep { n: string; title: string; desc: string; }
+export interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  sample: boolean;
+}
+
 @Injectable({ providedIn: 'root' })
 export class PortfolioDataService {
 
   readonly config = environment;
 
-  readonly roles = [
-    'Full Stack Developer',
-    'Angular Developer',
-    '.NET Developer',
-    'Prompt Engineer',
+  readonly stats: Stat[] = [
+    { value: '4+', label: 'Years experience' },
+    { value: '7+', label: 'Projects shipped' },
+    { value: '100%', label: 'API-driven' },
+    { value: '3+', label: 'Cloud platforms' },
   ];
 
-  readonly stats = [
-    { value: '4+', label: 'Years Experience' },
-    { value: '7+', label: 'Projects Built' },
-    { value: '100%', label: 'API Integration' },
-    { value: '3+', label: 'Cloud Platforms' },
+  readonly techStack: string[] = [
+    'JavaScript', 'TypeScript', 'Angular', '.NET', 'SQL', 'MongoDB',
+    'OpenAI API', 'Claude AI', 'Cursor', 'REST APIs', 'Azure', 'Netlify', 'Heroku',
   ];
 
-  readonly info = [
-    { icon: '📍', label: 'Location', value: environment.location },
-    { icon: '📧', label: 'Email', value: environment.email },
-    { icon: '📱', label: 'Phone', value: environment.phone },
-    { icon: '💼', label: 'Available', value: 'Freelance & Full-time' },
-  ];
-
-  readonly techStack = [
-    'JavaScript', 'TypeScript', 'Angular', '.NET',
-    'SQL', 'MongoDB', 'OpenAI API', 'REST APIs',
-    'Azure', 'Netlify', 'Heroku', 'Cursor', 'Claude AI',
-  ];
-
-  readonly skills = [
-    { name: 'Angular Development', level: 95, color: '#6c63ff' },
-    { name: '.NET Development', level: 90, color: '#f093fb' },
-    { name: 'API Design & Integration', level: 100, color: '#00f5a0' },
-    { name: 'Full Stack Development', level: 90, color: '#00d4ff' },
-    { name: 'SQL & Database Management', level: 85, color: '#6c63ff' },
-    { name: 'Prompt Engineering', level: 90, color: '#f093fb' },
-    { name: 'Responsive Web Design', level: 95, color: '#00f5a0' },
-    { name: 'Azure Deployment', level: 80, color: '#00d4ff' },
-  ];
-
-  readonly tools = [
-    { name: 'Angular', icon: '🔴' },
-    { name: '.NET', icon: '💜' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'JavaScript', icon: '🟡' },
-    { name: 'SQL', icon: '🗄️' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'OpenAI API', icon: '🤖' },
-    { name: 'Claude AI', icon: '🧠' },
-    { name: 'Cursor', icon: '🖱️' },
-    { name: 'REST APIs', icon: '🔗' },
-    { name: 'Azure', icon: '🔵' },
-    { name: 'Netlify', icon: '🟩' },
-    { name: 'Heroku', icon: '🟣' },
-  ];
-
-  readonly filters = ['All', 'MERN Stack', 'Full Stack', 'AI / .NET'];
-
-  readonly projects = [
+  readonly projects: Project[] = [
     {
       title: 'AI Agent — Automated Bug Detection & Resolution',
-      description: 'Intelligent AI agent that automatically detects, diagnoses, and resolves software bugs across .NET and Angular codebases. Powered by OpenAI API to analyse stack traces, suggest fixes, and apply patches with minimal human intervention.',
+      description: 'Intelligent AI agent that automatically detects, diagnoses, and resolves software bugs across .NET and Angular codebases. Powered by the OpenAI API to analyse stack traces, suggest fixes, and apply patches with minimal human intervention.',
       tags: ['.NET', 'Angular', 'OpenAI API', 'TypeScript'],
       category: 'AI / .NET',
       image: 'img/ai-agent.png',
@@ -74,7 +51,7 @@ export class PortfolioDataService {
     },
     {
       title: 'ATOM — Advanced Trial Optimization & Management',
-      description: 'Enterprise clinical trial management platform for DMClinical. Streamlines the full trial lifecycle — site management, patient enrollment, protocol compliance, data collection, and regulatory reporting — giving sponsors and CROs real-time visibility into trial progress.',
+      description: 'Enterprise clinical trial management platform for DMClinical. Streamlines the full trial lifecycle — site management, patient enrollment, protocol compliance, data collection, and regulatory reporting — giving sponsors and CROs real-time visibility.',
       tags: ['.NET', 'Angular', 'SQL', 'Full Stack'],
       category: 'Full Stack',
       image: 'img/atom.png',
@@ -83,7 +60,7 @@ export class PortfolioDataService {
     },
     {
       title: 'Hospital Inspection Application',
-      description: 'A comprehensive hospital inspection and compliance management system. Enables inspectors to conduct structured audits, log findings, track corrective actions, and generate detailed compliance reports across hospital departments.',
+      description: 'A comprehensive hospital inspection and compliance system. Inspectors conduct structured audits, log findings, track corrective actions, and generate detailed compliance reports across hospital departments.',
       tags: ['.NET', 'Angular', 'SQL', 'Full Stack'],
       category: 'Full Stack',
       image: 'img/hospital-inspection.png',
@@ -92,7 +69,7 @@ export class PortfolioDataService {
     },
     {
       title: 'BistroKoo — Restaurant Ordering',
-      description: 'A full-featured online restaurant ordering and management platform. Real-time order tracking, menu management, and payment integration built with the MERN stack.',
+      description: 'A full-featured online restaurant ordering and management platform. Real-time order tracking, menu management, and payment integration built end-to-end on the MERN stack.',
       tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
       category: 'MERN Stack',
       image: 'img/bistro.jpg',
@@ -109,52 +86,72 @@ export class PortfolioDataService {
       color: '#f093fb',
     },
     {
-      title: 'Salon SPA Advisor',
-      description: 'Worked as a maintenance engineer on this business management system for salon operations. Appointment booking, staff management, inventory tracking, and customer analytics dashboard.',
-      tags: ['Full Stack', 'React.js', 'Node.js', 'MongoDB'],
-      category: 'Full Stack',
+      title: 'Salon SPA Advisor & FlexStaf-IT',
+      description: 'Maintenance-engineer role on two live platforms — a salon operations suite (bookings, staff, inventory, analytics) and an IT staffing platform (job matching, profiles, contract workflows).',
+      tags: ['Full Stack', 'React.js', 'Node.js', 'SQL'],
+      category: 'Maintenance',
       image: 'img/salonspa.jpg',
-      year: '2020',
-      color: '#00d4ff',
-    },
-    {
-      title: 'FlexStaf-IT — Staffing Platform',
-      description: 'Worked as a maintenance engineer on this IT staffing and talent acquisition platform connecting clients with tech professionals. Job matching algorithms, profile management, and contract workflows.',
-      tags: ['Full Stack', 'JavaScript', 'Node.js', 'SQL'],
-      category: 'Full Stack',
-      image: 'img/flexstaf-it.jpg',
-      year: '2019',
-      color: '#00f5a0',
-    },
-  ];
-
-  readonly contactInfo = [
-    {
-      icon: '📧',
-      label: 'Email',
-      value: environment.email,
-      href: `mailto:${environment.email}`,
-      color: '#6c63ff',
-    },
-    {
-      icon: '📱',
-      label: 'Phone',
-      value: environment.phone,
-      href: `tel:${environment.phone.replace(/\s/g, '')}`,
-      color: '#f093fb',
-    },
-    {
-      icon: '📍',
-      label: 'Location',
-      value: environment.location,
-      href: '#',
+      year: '2019–20',
       color: '#00d4ff',
     },
   ];
 
-  readonly socials = [
+  readonly socials: Social[] = [
     { label: 'LinkedIn', href: environment.linkedin, icon: 'in' },
     { label: 'Upwork', href: environment.upwork, icon: 'up' },
     { label: 'GitHub', href: environment.github, icon: 'gh' },
+  ];
+
+  readonly services: Service[] = [
+    {
+      icon: '🧩',
+      title: 'Full-Stack Web Development',
+      desc: 'End-to-end apps with Angular front ends and .NET / SQL back ends — clean architecture, responsive UI, production-ready.',
+      points: ['Angular & TypeScript', '.NET & SQL / MongoDB', 'Responsive, accessible UI'],
+    },
+    {
+      icon: '🔗',
+      title: 'API Design & Integration',
+      desc: 'REST APIs, third-party integrations, and data models that scale. 100% of my projects are API-driven.',
+      points: ['REST API architecture', 'Third-party integrations', 'Cloud deploy: Azure / Netlify / Heroku'],
+    },
+    {
+      icon: '🤖',
+      title: 'AI-Powered Development',
+      desc: 'Prompt engineering and AI agents that automate the tedious parts — including a bug-fixing agent for .NET & Angular.',
+      points: ['OpenAI & Claude integrations', 'Prompt engineering', 'AI agents & automation'],
+    },
+  ];
+
+  readonly process: ProcessStep[] = [
+    { n: '01', title: 'Discover', desc: 'Understand the problem, users, and constraints.' },
+    { n: '02', title: 'Design', desc: 'Architecture, data model, and UI direction.' },
+    { n: '03', title: 'Build', desc: 'Clean, tested, AI-accelerated development.' },
+    { n: '04', title: 'Review', desc: 'QA, performance, and security checks.' },
+    { n: '05', title: 'Ship', desc: 'Deploy to the cloud with monitoring.' },
+  ];
+
+  readonly testimonials: Testimonial[] = [
+    {
+      quote: 'Hasnain did an excellent job as a Senior Software Engineer. He showed strong expertise in .NET, Angular, and AI-focused development, and delivered quality work professionally.',
+      name: '',
+      role: 'Upwork Client · 5.0 ★',
+      company: 'Senior Software Engineer, .NET & Angular · 2026',
+      sample: false,
+    },
+    {
+      quote: 'Muhammad is a highly professional and capable Full Stack Developer with strong expertise in C#/.NET and Angular. He consistently demonstrates technical proficiency and problem-solving ability.',
+      name: '',
+      role: 'Upwork Client · 5.0 ★',
+      company: 'C#/.NET Application Debugging · 2026',
+      sample: false,
+    },
+    {
+      quote: 'Muhammad delivered good work on my project, and his skills are reasonably strong. I enjoyed working with him.',
+      name: '',
+      role: 'Upwork Client · 5.0 ★',
+      company: 'MERN Stack Project · 2023',
+      sample: false,
+    },
   ];
 }

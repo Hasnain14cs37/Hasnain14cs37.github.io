@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortfolioDataService } from '../../services/portfolio-data.service';
+import { PortfolioDataService, Social } from '../../services/portfolio-data.service';
+import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  contactInfo: any[];
-  socials: any[];
+  socials: Social[];
   email: string;
+  upwork: string;
 
   constructor(private data: PortfolioDataService) {
-    this.contactInfo = data.contactInfo;
     this.socials = data.socials;
     this.email = data.config.email;
+    this.upwork = data.config.upwork;
   }
 }

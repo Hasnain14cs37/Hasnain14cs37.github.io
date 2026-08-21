@@ -1,54 +1,40 @@
-<section id="hero" class="hero">
-  <div class="hero-bg">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-overlay"></div>
-  </div>
-
-  <div class="container hero-content">
-    <div class="hero-text">
-      <div class="badge">
-        <span class="dot"></span> Open to opportunities
-      </div>
-      <h1>
-        Hi, I'm <span class="gradient-name">Muhammad<br>Hasnain</span>
-      </h1>
-      <div class="role-wrapper">
-        <span class="role-text">{{ currentRole }}</span><span class="cursor">|</span>
-      </div>
-      <p class="hero-desc">
-        Full Stack Developer with <strong>4+ years</strong> of experience crafting scalable web applications.
-        Specialized in Angular, .NET, and AI-powered development using <strong>Cursor</strong> & <strong>Claude AI</strong>.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">
-          View My Work ↓
-        </a>
-        <a href="mailto:engr.hasnain14cs37@gmail.com" class="btn-outline">
-          Get In Touch
-        </a>
-        <a [href]="cvPath" download class="btn-outline">
-          Download CV ↓
-        </a>
-      </div>
-      <div class="stats">
-        <div class="stat" *ngFor="let s of stats">
-          <span class="stat-value">{{ s.value }}</span>
-          <span class="stat-label">{{ s.label }}</span>
-        </div>
-      </div>
+<header id="hero" class="hero">
+  <div class="wrap">
+    <span class="hero-eyebrow eyebrow">Full-Stack Developer · Prompt Engineer</span>
+    <h1>I build scalable web apps with <span class="hl">Angular, .NET &amp; AI</span>.</h1>
+    <p class="hero-sub">
+      4+ years shipping production software for clinical, healthcare, and enterprise teams —
+      front to back, plus the AI agents that speed the whole thing up.
+    </p>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-accent">View my work</a>
+      <a [href]="'mailto:' + email" class="btn btn-ghost">Get in touch</a>
     </div>
 
-    <div class="hero-visual">
-      <div class="avatar-ring">
-        <div class="avatar-glow"></div>
-        <img src="img/profile-hero.png" alt="Muhammad Hasnain" class="avatar" />
+    <div class="showcase" appReveal>
+      <div class="showcase-bar">
+        <span class="d"></span><span class="d"></span><span class="d"></span>
+        <span class="url">hasnain14cs37.github.io</span>
       </div>
-      <div class="floating-badge fb-1">🔴 Angular</div>
-      <div class="floating-badge fb-2">💜 .NET</div>
-      <div class="floating-badge fb-3">🖱️ Cursor</div>
-      <div class="floating-badge fb-4">🤖 Claude AI</div>
+      <div class="showcase-body">
+        <img src="img/ai-agent.png" alt="AI-powered incident-response dashboard built by Muhammad Hasnain" loading="lazy" />
+      </div>
     </div>
   </div>
-</section>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat" *ngFor="let s of stats">
+        <b>{{ s.value }}</b>
+        <span>{{ s.label }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span *ngFor="let t of techStack">{{ t }}</span>
+      <span *ngFor="let t of techStack">{{ t }}</span>
+    </div>
+  </div>
+</header>

@@ -1,52 +1,15 @@
-<section id="contact" class="contact section">
-  <div class="container">
-    <div class="section-header">
-      <div class="badge">Contact</div>
-      <h2 class="section-title">Let's Work Together</h2>
-      <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
-    </div>
-
-    <div class="contact-layout">
-      <div class="contact-left">
-        <p class="contact-intro">
-          I'm currently available for freelance projects and open to full-time opportunities.
-          Whether you need a full-stack web app, API integration, or cloud deployment —
-          let's make it happen.
-        </p>
-
-        <div class="contact-cards">
-          <a class="contact-card" *ngFor="let c of contactInfo" [href]="c.href">
-            <div class="contact-icon-wrap" [style.background]="c.color + '18'" [style.border-color]="c.color + '44'">
-              <span>{{ c.icon }}</span>
-            </div>
-            <div class="contact-info">
-              <span class="contact-label">{{ c.label }}</span>
-              <span class="contact-value">{{ c.value }}</span>
-            </div>
-          </a>
-        </div>
+<section id="contact" class="sec contact">
+  <div class="wrap">
+    <div appReveal>
+      <span class="eyebrow">Contact</span>
+      <h2 style="margin-top: 1rem">Have a project in <span class="hl">mind?</span></h2>
+      <p>Available for freelance projects and full-time roles. Send an email and I'll reply within a few hours.</p>
+      <div class="contact-cta">
+        <a [href]="'mailto:' + email" class="btn btn-accent">Let's work together</a>
+        <a [href]="upwork" target="_blank" rel="noopener" class="btn btn-ghost">Hire on Upwork</a>
       </div>
-
-      <div class="contact-right">
-        <div class="social-panel">
-          <h3 class="social-heading">Find me on</h3>
-          <div class="social-links">
-            <a *ngFor="let s of socials" [href]="s.href" target="_blank" class="social-link">
-              <span class="social-icon">{{ s.icon }}</span>
-              <span>{{ s.label }}</span>
-              <span class="arrow">↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="cta-panel">
-          <div class="cta-glow"></div>
-          <h3>Ready to collaborate?</h3>
-          <p>Send me an email and I'll get back to you within 0-4 hours.</p>
-          <a [href]="'mailto:' + email" class="btn-primary">
-            Send Email ✉️
-          </a>
-        </div>
+      <div class="socials">
+        <a *ngFor="let s of socials" [href]="s.href" target="_blank" rel="noopener">{{ s.label }} ↗</a>
       </div>
     </div>
   </div>
