@@ -86,13 +86,22 @@ export class PortfolioDataService {
       color: '#f093fb',
     },
     {
-      title: 'Salon SPA Advisor & FlexStaf-IT',
-      description: 'Maintenance-engineer role on two live platforms — a salon operations suite (bookings, staff, inventory, analytics) and an IT staffing platform (job matching, profiles, contract workflows).',
-      tags: ['Full Stack', 'React.js', 'Node.js', 'SQL'],
+      title: 'Salon SPA Advisor',
+      description: 'Maintenance-engineer role on this salon operations suite — appointment booking, staff management, inventory tracking, and a customer-analytics dashboard.',
+      tags: ['Full Stack', 'React.js', 'Node.js', 'MongoDB'],
       category: 'Maintenance',
       image: 'img/salonspa.jpg',
-      year: '2019–20',
+      year: '2020',
       color: '#00d4ff',
+    },
+    {
+      title: 'FlexStaf-IT — Staffing Platform',
+      description: 'Maintenance-engineer role on this IT staffing and talent-acquisition platform — job matching, profile management, and contract workflows connecting clients with tech professionals.',
+      tags: ['Full Stack', 'JavaScript', 'Node.js', 'SQL'],
+      category: 'Maintenance',
+      image: 'img/flexstaf-it.jpg',
+      year: '2019',
+      color: '#00f5a0',
     },
   ];
 
