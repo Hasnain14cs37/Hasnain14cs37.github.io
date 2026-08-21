@@ -8,6 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PortfolioDataService } from './services/portfolio-data.service';
 
 @Component({
   selector: 'app-root',
@@ -25,4 +26,11 @@ import { FooterComponent } from './components/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {}
+export class AppComponent {
+  whatsapp: string;
+  constructor(data: PortfolioDataService) {
+    const num = data.config.phone.replace(/\D/g, '');
+    this.whatsapp = `https://wa.me/${num}?text=` +
+      encodeURIComponent('Hi Muhammad, I saw your portfolio and would like to discuss a project.');
+  }
+}

@@ -13,10 +13,14 @@ export class ContactComponent {
   socials: Social[];
   email: string;
   upwork: string;
+  whatsapp: string;
 
   constructor(private data: PortfolioDataService) {
     this.socials = data.socials;
     this.email = data.config.email;
     this.upwork = data.config.upwork;
+    const num = data.config.phone.replace(/\D/g, '');
+    this.whatsapp = `https://wa.me/${num}?text=` +
+      encodeURIComponent('Hi Muhammad, I saw your portfolio and would like to discuss a project.');
   }
 }
