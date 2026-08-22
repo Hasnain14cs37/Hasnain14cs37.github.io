@@ -5,6 +5,7 @@ import { WorkComponent } from './components/work/work.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ProcessComponent } from './components/process/process.component';
 import { AboutComponent } from './components/about/about.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,6 +20,7 @@ import { PortfolioDataService } from './services/portfolio-data.service';
     ServicesComponent,
     ProcessComponent,
     AboutComponent,
+    ExperienceComponent,
     TestimonialsComponent,
     ContactComponent,
     FooterComponent

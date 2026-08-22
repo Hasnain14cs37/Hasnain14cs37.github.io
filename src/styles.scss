@@ -191,6 +191,19 @@ h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -0.02em; line-height: 
 .cred-v { font-weight: 600; }
 .cred-v.accent { color: var(--accent); }
 
+/* experience timeline */
+.timeline { display: grid; }
+.tl-item { position: relative; padding: 0 0 2.2rem 2.2rem; border-left: 1px solid var(--line); }
+.tl-item:last-child { border-left-color: transparent; padding-bottom: 0; }
+.tl-item::before { content: ''; position: absolute; left: -7px; top: 3px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(198,242,78,0.15); }
+.tl-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.tl-role { font-size: 1.15rem; font-weight: 700; }
+.tl-period { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); white-space: nowrap; }
+.tl-co { color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 0.9rem; }
+.tl-points { list-style: none; display: grid; gap: 0.45rem; }
+.tl-points li { position: relative; padding-left: 1.2rem; font-size: 0.92rem; color: #b9c2d6; }
+.tl-points li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
+
 /* testimonials */
 .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; }
 .quote-card { border: 1px solid var(--line); border-radius: var(--r); padding: 2rem 1.8rem; background: var(--surface); }

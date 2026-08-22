@@ -1,10 +1,10 @@
 export const environment = {
   production: false,
   name: 'Muhammad Hasnain',
-  title: 'Full Stack Developer & Prompt Engineer',
+  title: 'Full Stack Software Engineer & AI Agent Developer',
   email: 'engr.hasnain14cs37@gmail.com',
   phone: '+92 304 0104778',
-  location: 'Bahawalpur, Pakistan',
+  location: 'Lahore, Pakistan',
   linkedin: 'https://www.linkedin.com/in/muhammad-hasnain-14cs37/',
   upwork: 'https://www.upwork.com/freelancers/~0129c81b65e7d88cfb',
   github: 'https://github.com/Hasnain14cs37',

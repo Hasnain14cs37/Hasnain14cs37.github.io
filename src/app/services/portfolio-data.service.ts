@@ -14,6 +14,7 @@ export interface Project {
 export interface Social { label: string; href: string; icon: string; }
 export interface Service { icon: string; title: string; desc: string; points: string[]; }
 export interface ProcessStep { n: string; title: string; desc: string; }
+export interface Experience { role: string; company: string; location: string; period: string; points: string[]; }
 export interface Testimonial {
   quote: string;
   name: string;
@@ -35,15 +36,15 @@ export class PortfolioDataService {
   ];
 
   readonly techStack: string[] = [
-    'JavaScript', 'TypeScript', 'Angular', '.NET', 'SQL', 'PostgreSQL', 'MongoDB', 'Redis',
-    'OpenAI API', 'Claude AI', 'Cursor', 'REST APIs', 'Docker', 'Azure', 'Netlify', 'Heroku',
+    'C#', 'TypeScript', '.NET Core', 'Angular', 'React', 'Node.js', 'SQL Server', 'PostgreSQL',
+    'MongoDB', 'Redis', 'SignalR', 'OpenAI API', 'Docker', 'Azure DevOps', 'REST APIs', 'Tailwind CSS',
   ];
 
   readonly projects: Project[] = [
     {
       title: 'AI Agent — Automated Bug Detection & Resolution',
-      description: 'Intelligent AI agent that automatically detects, diagnoses, and resolves software bugs across .NET and Angular codebases. Powered by the OpenAI API to analyse stack traces, suggest fixes, and apply patches with minimal human intervention.',
-      tags: ['.NET', 'Angular', 'OpenAI API', 'TypeScript'],
+      description: 'A production AI agent (OpenAI API) at DMCR that monitors systems, autonomously detects bugs, analyzes root causes, and generates ready-to-apply fixes — cutting MTTR. Prompt pipelines feed logs and code context to the LLM; contributed to a 96% SQL query speedup.',
+      tags: ['.NET Core', 'OpenAI API', 'Prompt Engineering', 'Azure DevOps'],
       category: 'AI / .NET',
       image: 'img/ai-agent.png',
       year: '2025',
@@ -51,8 +52,8 @@ export class PortfolioDataService {
     },
     {
       title: 'ATOM — Advanced Trial Optimization & Management',
-      description: 'Enterprise clinical trial management platform for DMClinical. Streamlines the full trial lifecycle — site management, patient enrollment, protocol compliance, data collection, and regulatory reporting — giving sponsors and CROs real-time visibility.',
-      tags: ['.NET', 'Angular', 'SQL', 'Full Stack'],
+      description: 'Centralized clinical-trial management platform at DM Clinical Research, built on .NET Core, Angular & SQL Server. Led the Angular front end, integrated REST APIs, and engineered SQL stored procedures, views, and triggers; revamped UI/UX and core architecture for scale.',
+      tags: ['.NET Core', 'Angular', 'SQL Server', 'Azure DevOps'],
       category: 'Full Stack',
       image: 'img/atom.png',
       year: '2024',
@@ -115,20 +116,55 @@ export class PortfolioDataService {
     {
       icon: '🧩',
       title: 'Full-Stack Web Development',
-      desc: 'End-to-end apps with Angular front ends and .NET / SQL back ends — clean architecture, responsive UI, production-ready.',
-      points: ['Angular & TypeScript', '.NET & SQL / MongoDB', 'Responsive, accessible UI'],
+      desc: 'End-to-end apps with Angular front ends and .NET Core / SQL Server back ends — clean architecture, responsive UI, production-ready.',
+      points: ['Angular & TypeScript', '.NET Core & SQL Server', 'Real-time features with SignalR'],
     },
     {
       icon: '🔗',
       title: 'API Design & Integration',
       desc: 'REST APIs, third-party integrations, and data models that scale. 100% of my projects are API-driven.',
-      points: ['REST API architecture', 'Redis caching & performance', 'Docker & cloud deploy (Azure / Netlify / Heroku)'],
+      points: ['REST API architecture', 'Redis caching & performance', 'Docker & Azure DevOps CI/CD'],
     },
     {
       icon: '🤖',
       title: 'AI-Powered Development',
       desc: 'Prompt engineering and AI agents that automate the tedious parts — including a bug-fixing agent for .NET & Angular.',
       points: ['OpenAI & Claude integrations', 'Prompt engineering', 'AI agents & automation'],
+    },
+  ];
+
+  readonly experience: Experience[] = [
+    {
+      role: 'Full-Stack Software Engineer',
+      company: 'DM Clinical Research (DMCR)',
+      location: 'Remote — Houston, TX',
+      period: 'Apr 2025 – Present',
+      points: [
+        'Built a production AI agent (OpenAI API) that autonomously detects bugs, analyzes root causes, and generates ready-to-apply fixes — cutting mean time to resolution.',
+        'Building ATOM, a clinical-trial management platform on .NET Core, Angular & SQL Server; revamped UI/UX and core architecture for scale.',
+        'Set up and manage Azure DevOps CI/CD pipelines and end-to-end Agile sprint delivery.',
+      ],
+    },
+    {
+      role: 'Software Engineer',
+      company: 'Punjab Healthcare Commission',
+      location: 'Lahore, PK',
+      period: 'May 2023 – Apr 2025',
+      points: [
+        'Developed full-stack healthcare inspection & complaint systems with Angular, .NET Core & SQL Server.',
+        'Integrated the Business WhatsApp API for automated complaint handling and faster response times.',
+        'Used a self-built AI agent to optimize SQL — cut a query from 1.4 min to 4.5 sec (96% faster).',
+      ],
+    },
+    {
+      role: 'Software Engineer',
+      company: 'Lab Code',
+      location: 'Bahawalpur, PK',
+      period: 'Aug 2022 – Apr 2023',
+      points: [
+        'Built Ed-Tech and FinTech products on the MERN stack.',
+        'Designed secure REST APIs with JWT auth; optimized MongoDB queries for faster responses.',
+      ],
     },
   ];
 
