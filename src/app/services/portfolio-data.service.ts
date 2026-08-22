@@ -31,7 +31,7 @@ export class PortfolioDataService {
 
   readonly stats: Stat[] = [
     { value: '4+', label: 'Years experience' },
-    { value: '7+', label: 'Projects shipped' },
+    { value: '12+', label: 'Projects shipped' },
     { value: '100%', label: 'API-driven' },
     { value: '3+', label: 'Cloud platforms' },
   ];
