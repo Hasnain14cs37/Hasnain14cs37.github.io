@@ -12,13 +12,11 @@ import { RevealDirective } from '../../directives/reveal.directive';
 export class HeroComponent {
   stats: Stat[];
   techStack: string[];
-  email: string;
   cvPath: string;
 
   constructor(private data: PortfolioDataService) {
     this.stats = data.stats;
     this.techStack = data.techStack;
-    this.email = data.config.email;
     this.cvPath = data.config.cvPath;
   }
 }
