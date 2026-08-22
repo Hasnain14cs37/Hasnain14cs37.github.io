@@ -70,6 +70,15 @@ export class PortfolioDataService {
       color: '#34d399',
     },
     {
+      title: 'E-Service — PHC Complaint & Inspection Portal',
+      description: 'Punjab Healthcare Commission e-Portal for registration, licensing, and complaint management — with Business WhatsApp API integration and real-time SyncFusion dashboards. Built on .NET Core, Angular & SQL Server.',
+      tags: ['.NET Core', 'Angular', 'SQL Server', 'WhatsApp API'],
+      category: 'Full Stack',
+      image: 'img/e-service.jpg',
+      year: '2024',
+      color: '#22a06b',
+    },
+    {
       title: 'BistroKoo — Restaurant Ordering',
       description: 'A full-featured online restaurant ordering and management platform. Real-time order tracking, menu management, and payment integration built end-to-end on the MERN stack.',
       tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
@@ -117,11 +126,6 @@ export class PortfolioDataService {
       title: 'E-Diary — Document Management',
       desc: 'Document management with role-based access control (RBAC) and automated workflow routing across an org hierarchy.',
       tags: ['.NET Core', 'Angular', 'SQL Server', 'RBAC'],
-    },
-    {
-      title: 'E-Service — Complaint & Inspection',
-      desc: 'Complaint & inspection module with Business WhatsApp API integration and real-time SyncFusion dashboards.',
-      tags: ['.NET Core', 'Angular', 'WhatsApp API'],
     },
     {
       title: 'Restaurant POS System',
