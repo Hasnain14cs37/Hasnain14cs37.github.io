@@ -15,6 +15,7 @@ export interface Social { label: string; href: string; icon: string; }
 export interface Service { icon: string; title: string; desc: string; points: string[]; }
 export interface ProcessStep { n: string; title: string; desc: string; }
 export interface Experience { role: string; company: string; location: string; period: string; points: string[]; }
+export interface MiniProject { title: string; desc: string; tags: string[]; }
 export interface Testimonial {
   quote: string;
   name: string;
@@ -103,6 +104,29 @@ export class PortfolioDataService {
       image: 'img/flexstaf-it.jpg',
       year: '2019',
       color: '#00f5a0',
+    },
+  ];
+
+  readonly moreProjects: MiniProject[] = [
+    {
+      title: 'SixaTaxis — Real-Time Ride Platform',
+      desc: 'Live ride-status updates with SignalR + Redis; Dockerized .NET Core backend for consistent, scalable deploys.',
+      tags: ['.NET Core', 'SignalR', 'Redis', 'Docker'],
+    },
+    {
+      title: 'E-Diary — Document Management',
+      desc: 'Document management with role-based access control (RBAC) and automated workflow routing across an org hierarchy.',
+      tags: ['.NET Core', 'Angular', 'SQL Server', 'RBAC'],
+    },
+    {
+      title: 'E-Service — Complaint & Inspection',
+      desc: 'Complaint & inspection module with Business WhatsApp API integration and real-time SyncFusion dashboards.',
+      tags: ['.NET Core', 'Angular', 'WhatsApp API'],
+    },
+    {
+      title: 'Restaurant POS System',
+      desc: 'Point-of-sale with JWT auth, custom authorization middleware, and RESTful API integration on the MERN stack.',
+      tags: ['MERN', 'Node.js', 'MongoDB', 'JWT'],
     },
   ];
 

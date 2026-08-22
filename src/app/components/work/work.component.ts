@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortfolioDataService, Project } from '../../services/portfolio-data.service';
+import { PortfolioDataService, Project, MiniProject } from '../../services/portfolio-data.service';
 import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
@@ -30,13 +30,27 @@ import { RevealDirective } from '../../directives/reveal.directive';
             </div>
           </article>
         </div>
+
+        <div class="more-head" appReveal>
+          <span class="eyebrow">More work</span>
+          <h3>Selected engineering projects</h3>
+        </div>
+        <div class="more-grid">
+          <div class="more-card" *ngFor="let m of more; let i = index" [appReveal]="i * 70">
+            <h4>{{ m.title }}</h4>
+            <p>{{ m.desc }}</p>
+            <div class="more-tags"><span *ngFor="let t of m.tags">{{ t }}</span></div>
+          </div>
+        </div>
       </div>
     </section>
   `,
 })
 export class WorkComponent {
   projects: Project[];
+  more: MiniProject[];
   constructor(private data: PortfolioDataService) {
     this.projects = data.projects;
+    this.more = data.moreProjects;
   }
 }

@@ -161,6 +161,19 @@ h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -0.02em; line-height: 
 .work-meta { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.85rem; }
 .work-meta .cat { color: var(--accent); }
 
+/* more work (image-free project cards) */
+.more-head { margin: 4rem 0 2rem; }
+.more-head .eyebrow { display: block; margin-bottom: 0.6rem; }
+.more-head h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; }
+.more-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.3rem; }
+.more-card { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); padding: 1.5rem 1.6rem; transition: border-color 0.3s, transform 0.3s; }
+.more-card:hover { border-color: #3a3a42; transform: translateY(-4px); }
+.more-card h4 { font-size: 1.05rem; font-weight: 700; }
+.more-card p { color: var(--muted); font-size: 0.9rem; margin: 0.6rem 0 1rem; }
+.more-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.more-tags span { font-family: var(--font-mono); font-size: 0.66rem; color: var(--accent); border: 1px solid rgba(198,242,78,0.3); border-radius: 100px; padding: 0.2rem 0.6rem; }
+@media (max-width: 720px) { .more-grid { grid-template-columns: 1fr; } }
+
 /* services */
 .cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .svc { border: 1px solid var(--line); border-radius: var(--r); padding: 2rem 1.8rem; background: var(--surface); transition: transform 0.3s, border-color 0.3s, background 0.3s; }
