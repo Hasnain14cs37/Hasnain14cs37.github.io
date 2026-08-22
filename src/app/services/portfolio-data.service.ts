@@ -70,6 +70,15 @@ export class PortfolioDataService {
       color: '#34d399',
     },
     {
+      title: 'E-Diary — Document Management System',
+      description: 'Correspondence & file-register platform with role-based access control (RBAC) and automated workflow routing across an organizational hierarchy — every letter, file, and complaint logged and tracked. Built on .NET Core, Angular & SQL Server.',
+      tags: ['.NET Core', 'Angular', 'SQL Server', 'RBAC'],
+      category: 'Full Stack',
+      image: 'img/e-diary.jpg',
+      year: '2024',
+      color: '#14b8a6',
+    },
+    {
       title: 'E-Service — PHC Complaint & Inspection Portal',
       description: 'Punjab Healthcare Commission e-Portal for registration, licensing, and complaint management — with Business WhatsApp API integration and real-time SyncFusion dashboards. Built on .NET Core, Angular & SQL Server.',
       tags: ['.NET Core', 'Angular', 'SQL Server', 'WhatsApp API'],
@@ -121,11 +130,6 @@ export class PortfolioDataService {
       title: 'SixaTaxis — Real-Time Ride Platform',
       desc: 'Live ride-status updates with SignalR + Redis; Dockerized .NET Core backend for consistent, scalable deploys.',
       tags: ['.NET Core', 'SignalR', 'Redis', 'Docker'],
-    },
-    {
-      title: 'E-Diary — Document Management',
-      desc: 'Document management with role-based access control (RBAC) and automated workflow routing across an org hierarchy.',
-      tags: ['.NET Core', 'Angular', 'SQL Server', 'RBAC'],
     },
     {
       title: 'Restaurant POS System',
